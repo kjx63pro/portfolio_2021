@@ -57,6 +57,18 @@
     grid-template-columns: 1fr;
   }
 
+  .skills {
+    .skill {
+      grid-template-columns: 1fr;
+
+      .frontend,
+      .backend,
+      .others {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
