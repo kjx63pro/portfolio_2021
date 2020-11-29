@@ -184,8 +184,46 @@ main {
     padding: 0.8rem;
     border-bottom: #00cdab 5px solid; }
 
+.skills {
+  text-align: center; }
+  .skills > p {
+    font-size: 1.3rem; }
+  .skills .skill {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem; }
+    .skills .skill .frontend,
+    .skills .skill .backend,
+    .skills .skill .others {
+      background: #eee;
+      color: #333; }
+      .skills .skill .frontend h3,
+      .skills .skill .backend h3,
+      .skills .skill .others h3 {
+        margin: 0.7rem; }
+      .skills .skill .frontend > i,
+      .skills .skill .backend > i,
+      .skills .skill .others > i {
+        position: relative;
+        background: #00cdab;
+        padding: 0.8rem;
+        border-radius: 50%;
+        color: #eee;
+        margin-top: -2rem; }
+      .skills .skill .frontend .list i,
+      .skills .skill .backend .list i,
+      .skills .skill .others .list i {
+        color: #00cdab; }
+      .skills .skill .frontend .list p,
+      .skills .skill .backend .list p,
+      .skills .skill .others .list p {
+        font-size: 1rem;
+        margin: 0.2rem; }
+
 .no-job {
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  text-align: center; }
 
 .projects {
   display: grid;
@@ -194,10 +232,34 @@ main {
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #00cdab;
-      transition: all 0.5s ease-out; }
+  .projects .item {
+    width: 100%;
+    position: relative; }
+  .projects .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+    background: #333;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .projects .overlay:hover {
+    opacity: 0.7; }
+  .projects .overlay a {
+    background-color: #333;
+    padding: 0.2rem 0.7rem;
+    margin: 1rem;
+    border: 1px #fff solid;
+    border-radius: 20px; }
+  .projects .overlay a:hover {
+    background-color: #fff;
+    color: #333; }
 
 .boxes {
   display: flex;
@@ -272,6 +334,12 @@ main {
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
+  .skills .skill {
+    grid-template-columns: 1fr; }
+    .skills .skill .frontend,
+    .skills .skill .backend,
+    .skills .skill .others {
+      margin-bottom: 1rem; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
