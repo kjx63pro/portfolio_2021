@@ -280,6 +280,10 @@ main {
       .boxes div:hover span {
         color: #000; }
 
+.questions {
+  text-align: center;
+  font-size: 1.3rem; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
